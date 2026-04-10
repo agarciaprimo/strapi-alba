@@ -1,6 +1,6 @@
 import type { Core } from '@strapi/strapi';
 
-const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => ({
+export default ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => ({
   upload: {
     config: {
       provider: 'cloudinary',
@@ -9,12 +9,6 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
         api_key: env('CLOUDINARY_KEY'),
         api_secret: env('CLOUDINARY_SECRET'),
       },
-      actionOptions: {
-        upload: {},
-        delete: {},
-      },
     },
   },
 });
-
-export default config;
