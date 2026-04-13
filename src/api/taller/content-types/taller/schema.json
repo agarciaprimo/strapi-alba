@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "talleres",
+  "info": {
+    "singularName": "taller",
+    "pluralName": "talleres",
+    "displayName": "Talleres"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "string"
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titulo"
+    },
+    "resumen": {
+      "type": "text"
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "inicio": {
+      "type": "datetime"
+    },
+    "final": {
+      "type": "datetime"
+    },
+    "fecha": {
+      "type": "string"
+    },
+    "lugar": {
+      "type": "string"
+    },
+    "horario": {
+      "type": "string"
+    },
+    "horas": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
